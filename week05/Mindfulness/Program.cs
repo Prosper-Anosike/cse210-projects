@@ -21,14 +21,13 @@ class Program
             Console.WriteLine("4. Quit");
             Console.Write("Select a choice from the menu: ");
 
-            string? choice = Console.ReadLine();
+            string choice = Console.ReadLine() ?? string.Empty;
 
-            Activity? activity = choice switch
+            Activity activity = choice switch
             {
                 "1" => new BreathingActivity(),
                 "2" => new ReflectionActivity(),
                 "3" => new ListingActivity(),
-                "4" => null,
                 _ => null
             };
 

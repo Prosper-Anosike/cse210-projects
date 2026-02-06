@@ -38,7 +38,7 @@ public class ListingActivity : Activity
         while (DateTime.Now < endTime)
         {
             Console.Write("> ");
-            string? response = Console.ReadLine();
+            string response = Console.ReadLine() ?? string.Empty;
 
             if (!string.IsNullOrWhiteSpace(response))
             {
